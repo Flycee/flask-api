@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REST API</title>
+</head>
+<body>
+
+    <form action="/add_user" method="post">
+        <label for="i_text">Text:</label>
+        <input type="text" name="i_text" id="i_text" autofocus>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% for item in users %}
+    <table>
+        <tr>{{ item }}</tr>
+    </table>
+    {% endfor %}
+
+    <form action="/delete">
+        <input type="submit" value="Delete">
+    </form>
+</body>
+</html>
